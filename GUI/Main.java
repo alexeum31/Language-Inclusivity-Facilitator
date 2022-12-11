@@ -47,10 +47,10 @@ public class Main {
         frame.add(button);
 
 
-        // // creates dialogue boxes 
-        // // this should be inserted into a conditional statement
-        // JOptionPane.showMessageDialog(null, "insert message", 
-        // "A word has been flagged", JOptionPane.WARNING_MESSAGE);
+        // creates dialogue boxes 
+        // this should be inserted into a conditional statement
+        JOptionPane.showMessageDialog(null, "insert message", 
+        "A word has been flagged", JOptionPane.WARNING_MESSAGE);
         
         
     }
