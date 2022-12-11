@@ -20,6 +20,11 @@ public class Main {
         ImageIcon logo = new ImageIcon("logo.png");
         Border labelBorder = BorderFactory.createLineBorder(Color.black, 3);
         frame.setIconImage(logo.getImage());
+
+        // creates button that should be pressed once completed
+        JButton button = new JButton();
+        button.setBounds(1200, 0, 100, 50);
+        frame.add(button);
         
         // creates gray title panel
         JPanel panel = new JPanel(); //creates a panel
@@ -27,30 +32,17 @@ public class Main {
         frame.setLayout(new BorderLayout()); // creates a BorderLayout
         panel.setPreferredSize(new Dimension(2000, 100)); // sets the size of the panel
         frame.add(panel,BorderLayout.NORTH); // puts the border at the top
-
-        // adds text to the title panel
         JLabel titlelabel = new JLabel("Racist Terminology Remover");
-        frame.add(titlelabel);
-        titlelabel.setHorizontalTextPosition(JLabel.RIGHT);
-        titlelabel.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-        titlelabel.setIcon(logo);
-        titlelabel.setBackground(Color.lightGray);
-        titlelabel.setOpaque(true);
-        titlelabel.setBorder(labelBorder);
-        titlelabel.setVerticalAlignment(JLabel.TOP);
-        titlelabel.setHorizontalAlignment(JLabel.CENTER);
-    
+        titlelabel.setFont(new Font("Verdana",1,30));
+        panel.add(titlelabel);
+        frame.setVisible(true);
         
-        // creates button that should be pressed once completed
-        JButton button = new JButton();
-        button.setBounds(200, 100, 100, 50);
-        frame.add(button);
 
 
-        // creates dialogue boxes 
-        // this should be inserted into a conditional statement
-        JOptionPane.showMessageDialog(null, "insert message", 
-        "A word has been flagged", JOptionPane.WARNING_MESSAGE);
+        // // creates dialogue boxes 
+        // // this should be inserted into a conditional statement
+        // JOptionPane.showMessageDialog(null, "insert message", 
+        // "A word has been flagged", JOptionPane.WARNING_MESSAGE);
         
         
     }
