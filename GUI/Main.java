@@ -6,16 +6,7 @@ import java.awt.event.ActionListener;
 
 
 public class Main {
-    // creates global JButton
-    static JButton button = new JButton();
-
-    // creates actionPerformed method
-    public void actionPerformed(ActionEvent e){
-        if(e.getSource()==button){
-            System.out.print("test");
-        }
-    }
-
+    
     public static void main(String[] args) {
         // Creates a GUI window
         JFrame frame = new JFrame();
@@ -30,9 +21,16 @@ public class Main {
         Border labelBorder = BorderFactory.createLineBorder(Color.black, 3);
         frame.setIconImage(logo.getImage());
 
+        // creates actionPerformed method
+        ActionListener listener = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            System.out.println("The button was clicked!");
+            }
+        };
         // sets size of button 
+        JButton button = new JButton();
         button.setBounds(1200, 0, 100, 50);
-        button.addActionListener(ActionListener);
+        button.addActionListener(listener);
         frame.add(button);
 
 
