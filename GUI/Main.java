@@ -1,8 +1,20 @@
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 public class Main {
+    // creates global JButton
+    static JButton button = new JButton();
+
+    // creates actionPerformed method
+    public void actionPerformed(ActionEvent e){
+        if(e.getSource()==button){
+            System.out.print("test");
+        }
+    }
 
     public static void main(String[] args) {
         // Creates a GUI window
@@ -18,9 +30,9 @@ public class Main {
         Border labelBorder = BorderFactory.createLineBorder(Color.black, 3);
         frame.setIconImage(logo.getImage());
 
-        // creates button that should be pressed once completed
-        JButton button = new JButton();
+        // sets size of button 
         button.setBounds(1200, 0, 100, 50);
+        button.addActionListener(ActionListener);
         frame.add(button);
 
 
