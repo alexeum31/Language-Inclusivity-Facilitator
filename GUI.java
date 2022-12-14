@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,29 +7,41 @@ import java.awt.event.ActionListener;
 public class GUI {
     
     public static void main(String[] args) {
+        //gets dimensions of screen
+        Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
+        double width = (double)size.getWidth();
+        double height = (double)size.getHeight();
+       
+
         // Creates a GUI window
         JFrame frame = new JFrame();
+        frame.setLayout(new FlowLayout()); // sets to flow layout
         frame.setTitle("Racist Terminology Remover"); // sets title of frame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // exits frame when closed
-        frame.setSize(2000, 1000); // sets size of frame
+        frame.setSize((int)width, (int)height); // sets size of frame
         frame.setVisible(true); // makes frame visible
+        // creates JTextArea
+        JTextArea textarea = new JTextArea();
+        textarea.setBounds(0,(int)height/10, (int)(width),(int) height);
+        textarea.setLineWrap(true);
+        frame.add(textarea);
 
         // creates image icon
         // border needs fixing
         ImageIcon logo = new ImageIcon("logo.png");
-        Border labelBorder = BorderFactory.createLineBorder(Color.black, 3);
         frame.setIconImage(logo.getImage());
-
+        
         // creates actionPerformed method
         ActionListener listener = new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-            System.out.println("The button was clicked!");
+                //should call string modifier function
+            System.out.println(textarea.getText());
             }
         };
         // sets size of button 
         JButton button = new JButton();
-        button.setBounds(1200, 0, 200, 75);
-        button.setText("Click when finished");
+        button.setBounds((int)(width/1.5), 0, (int)width/15, (int)height/15);
+        button.setText("Click me");
         button.addActionListener(listener);
         frame.add(button);
 
@@ -39,12 +50,14 @@ public class GUI {
         JPanel panel = new JPanel(); //creates a panel
         panel.setBackground(Color.gray); //sets the color to gray
         frame.setLayout(new BorderLayout()); // creates a BorderLayout
-        panel.setPreferredSize(new Dimension(2000, 100)); // sets the size of the panel
+        panel.setPreferredSize(new Dimension((int)width, (int) height/10)); // sets the size of the panel
         frame.add(panel, BorderLayout.NORTH); // puts the border at the top
         JLabel titlelabel = new JLabel("Racist Terminology Remover");
         titlelabel.setFont(new Font("Verdana", 1, 30));
         panel.add(titlelabel);
         frame.setVisible(true);
+
+        
 
 
         // // creates dialogue boxes
@@ -56,17 +69,3 @@ public class GUI {
     }
 }
 
-// test code- KeyListener
-// public class MyFrame extends JFrame implements KeyListener {
-
-//     public Myrame(){
-//         this.addKeyListener(this);
-//     }
-
-// // Checks if the space bar is pressed.
-// public void keyTyped(KeyEvent event) {
-//     switch(event.getKeyChar()) {
-//         case ' ': ;
-//     }
-//     }
-// }

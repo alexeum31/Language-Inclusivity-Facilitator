@@ -24,8 +24,6 @@ public class stringModifier {
         // Adds items.
         dictionary.put(term, corrected);
 
-        // Reads in blank line between each term.
-        scanned.nextLine();
     }
     scanned.close();
     
