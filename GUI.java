@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Main {
+public class GUI {
     
     public static void main(String[] args) {
         // Creates a GUI window
@@ -29,7 +29,8 @@ public class Main {
         };
         // sets size of button 
         JButton button = new JButton();
-        button.setBounds(1200, 0, 100, 50);
+        button.setBounds(1200, 0, 200, 75);
+        button.setText("Click when finished");
         button.addActionListener(listener);
         frame.add(button);
 
