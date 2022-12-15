@@ -56,16 +56,6 @@ public class GUI {
         titlelabel.setFont(new Font("Verdana", 1, 30));
         panel.add(titlelabel);
         frame.setVisible(true);
-
-        
-
-
-        // // creates dialogue boxes
-        // // this should be inserted into a conditional statement
-        // JOptionPane.showMessageDialog(null, "insert message",
-        // "A word has been flagged", JOptionPane.WARNING_MESSAGE);
-
-
     }
 }
 
