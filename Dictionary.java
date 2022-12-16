@@ -57,9 +57,10 @@ public class Dictionary {
 
     public static void main(String[] args) throws FileNotFoundException{
         // TEST - prints HashMap values using returnHash method.
-        // TEST 1- tests sentence with flagged word in
+        // TEST 1- tests returnHash. Command line argument should be list.txt.
         // Expected output- same words and sequence as the list.txt file
-        HashMap<String, String[]> theDictionary = returnHash("list.txt");
+        String file = args[0];
+        HashMap<String, String[]> theDictionary = returnHash(file);
         theDictionary.forEach((flaggedWord, definitions) -> {
             String[] array = theDictionary.get(flaggedWord);
             System.out.println(flaggedWord);
