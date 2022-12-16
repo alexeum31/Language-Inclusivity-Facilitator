@@ -105,5 +105,11 @@ public class Dictionary {
         String testSentence4 = "Slaves were a root component of the American Civil War and they had a picnic.";
         String replacements4 = checkProblematic(testSentence4, theDictionary);
         System.out.println(replacements4);
+
+        // TEST 2.5 - no problematic words (only a true expression of gratitude)
+        // Expected output - "Everything is Safe!"
+        String testSentence5 = ".";
+        String replacements5 = checkProblematic(testSentence5, theDictionary);
+        System.out.println(replacements5);
     }
 }
