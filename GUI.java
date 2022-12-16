@@ -39,7 +39,7 @@ public class GUI {
             public void actionPerformed(ActionEvent e) {
                 String sentence = textarea.getText();
                 // TEST - prints inserted sentence
-                System.out.println(textarea.getText());
+                System.out.println("(GUI Test) You just typed: " + textarea.getText());
 
                 // prints suggestions
                 String suggestions = Dictionary.checkProblematic(sentence, dictionary);

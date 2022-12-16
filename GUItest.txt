@@ -1,0 +1,23 @@
+First, write "javac GUI.java" and "java GUI" into the command line. This should open the GUI.
+Note: only look at the first line that is printed out for each test. Anything after that tests the other functions. You
+can comment out the calls to other functions if you want to test just the GUI.java standalone file. We didn't want to do
+this because it may mess up the program when testing the project as a whole.
+Also, there seem to be no edge cases. Also, since we set the parameters of a valid sentence, it was hard to think of
+edge cases. We find that even for some not valid sentences, like the first test, the GUI works by printing exactly what
+was typed in.
+
+Test 1: Type nothing, or in other words, "", and press the button that says "click me".
+First line output: (GUI Test) You just typed:
+
+Test 2: Type "I saw a thug on the blacklist." and press the button that says "click me".
+First line output: (GUI Test) You just typed: I saw a thug on the blacklist.
+
+Test 3: Type "Thank you for all your help throughout this course." and press the button that says "click me".
+(GUI Test) You just typed: Thank you for all your help throughout this course.
+
+Test 4: Type a period, or in other words, ".", and press the button that says "click me".
+First line output: (GUI Test) You just typed: .
+
+
+
+
