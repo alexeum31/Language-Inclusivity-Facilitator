@@ -48,7 +48,12 @@ public class GUI {
             }
         };
 
-
+        // creates button
+        JButton button = new JButton();
+        button.setBounds((int) (width / 1.5), 0, (int) width / 15, (int) height / 15);
+        button.setText("Click me");
+        button.addActionListener(listener);
+        frame.add(button);
 
         // creates gray title panel
         JPanel panel = new JPanel(); //creates a panel
@@ -60,13 +65,7 @@ public class GUI {
         titlelabel.setFont(new Font("Verdana", 1, 30));
         panel.add(titlelabel);
         frame.setVisible(true);
+        button.repaint();
 
-        // creates button
-        JButton button = new JButton();
-        button.setBounds((int) (width / 1.5), 0, (int) width / 15, (int) height / 15);
-        button.setText("Click me");
-        button.addActionListener(listener);
-        frame.add(button);
-        panel.repaint();
     }
 }
